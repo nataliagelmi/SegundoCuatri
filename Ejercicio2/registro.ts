@@ -57,7 +57,41 @@ export class RegistroAutomotor {
     }
   }
 
-  // Métodos para el ID de sección
+   // Método para buscar un camión por dominio y modificar su capacidad
+   modificarCapacidadCamion(dominio: string, nuevaCapacidad: number): void {
+    const camion = this.listCamion.find(c => c.getDominio() === dominio);
+    if (camion) {
+        camion.setCapacidad(nuevaCapacidad); //  modificar la capacidad
+        console.log(`La capacidad del camión con dominio ${dominio} ha sido actualizada a ${nuevaCapacidad}.`);
+    } else {
+        console.log(`No se encontró un camión con el dominio ${dominio}.`);
+    }
+}
+
+ // Método para buscar una moto por dominio y modificar su cilindrada
+ modificarCilindradaMoto(dominio: string, nuevaCilindrada: number): void {
+  const moto = this.listMoto.find(m => m.getDominio() === dominio);
+  if (moto) {
+      moto.setCilindrada(nuevaCilindrada); // Usamos el setter para modificar la cilindrada
+      console.log(`La cilindrada de la moto con dominio ${dominio} ha sido actualizada a ${nuevaCilindrada}.`);
+  } else {
+      console.log(`No se encontró una moto con el dominio ${dominio}.`);
+  }
+}
+
+ 
+ // Método para buscar un auto por dominio y modificar su cantidad de puertas
+ modificarPuertasAuto(dominio: string, nuevasPuertas: number): void {
+  const auto = this.listAutos.find(a => a.getDominio() === dominio);
+  if (auto) {
+      auto.setCantPuertas(nuevasPuertas); // Usamos el setter para modificar la cantidad de puertas
+      console.log(`La cantidad de puertas del auto con dominio ${dominio} ha sido actualizada a ${nuevasPuertas}.`);
+  } else {
+      console.log(`No se encontró un auto con el dominio ${dominio}.`);
+  }
+}
+
+// Métodos para el ID de sección
  getSeccionId(): string {
     return this.seccionId;
   }
