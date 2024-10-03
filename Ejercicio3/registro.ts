@@ -1,6 +1,6 @@
-import { Auto } from "../Ejercicio2/auto";
-import { Moto } from "../Ejercicio2/moto";
-import { Camion } from "../Ejercicio2/camion";
+import { Auto } from "../Ejercicio3/auto";
+import { Moto } from "../Ejercicio3/moto";
+import { Camion } from "../Ejercicio3/camion";
 
 
 export class RegistroAutomotor {
@@ -78,8 +78,18 @@ export class RegistroAutomotor {
       console.log(`No se encontró una moto con el dominio ${dominio}.`);
   }
 }
-
+ //  Esto es para la herencia
+ modificarModeloMoto(dominio: string, nuevoModelo: string): void {
+  const moto = this.listMoto.find(m => m.getDominio() === dominio);
+  if (moto) {
+    moto.setModelo(nuevoModelo);
+    console.log(`El modelo de la moto con dominio ${dominio} ha sido actualizado a ${nuevoModelo}.`);
+  } else {
+    console.log(`No se encontró una moto con el dominio ${dominio}.`);
+  }
+}
  
+
  // Método para buscar un auto por dominio y modificar su cantidad de puertas
  modificarPuertasAuto(dominio: string, nuevasPuertas: number): void {
   const auto = this.listAutos.find(a => a.getDominio() === dominio);

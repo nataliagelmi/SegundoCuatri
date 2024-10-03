@@ -1,60 +1,49 @@
-export class vehiculo {
-    private dominio: string;
-    private marca: string;
-    private modelo: string;
-    private anio: number;
-   
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.vehiculo = void 0;
+var vehiculo = /** @class */ (function () {
     //  me crea las instancias.
-    constructor(dominio: string, marca: string, modelo: string, anio: number) {
+    function vehiculo(dominio, marca, modelo, anio) {
         this.dominio = dominio;
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
-       
     }
     //getter
-    getDominio(): string {
+    vehiculo.prototype.getDominio = function () {
         return this.dominio;
-    }
-
-    getMarca(): string {
+    };
+    vehiculo.prototype.getMarca = function () {
         return this.marca;
-    }
-
-    getModelo(): string {
+    };
+    vehiculo.prototype.getModelo = function () {
         return this.modelo;
-    }
-
-    getAnio(): number {
+    };
+    vehiculo.prototype.getAnio = function () {
         return this.anio;
-    }
-
-
+    };
     // setters   
-    setDominio(dominio: string): void {
+    vehiculo.prototype.setDominio = function (dominio) {
         if (dominio && dominio.trim() !== '') { // Verifico que no esté vacío
             this.dominio = dominio;
         }
-    }
-
-    setMarca(marca: string): void {
+    };
+    vehiculo.prototype.setMarca = function (marca) {
         if (marca && marca.trim() !== '') { // Verifico que no esté vacío
             this.marca = marca;
         }
-    }
-
-    setModelo(modelo: string): void {
+    };
+    vehiculo.prototype.setModelo = function (modelo) {
         if (modelo && modelo.trim() !== '') { // Verifico que no esté vacío
             this.modelo = modelo;
         }
-    }
-
-    setAnio(anio: number): void {
-        const anioActual = new Date().getFullYear();
+    };
+    vehiculo.prototype.setAnio = function (anio) {
+        var anioActual = new Date().getFullYear();
         if (anio >= 1900 && anio <= anioActual) { // Verifico que sea un año válido
             this.anio = anio;
         }
-    }
-
-    
-} 
+    };
+    return vehiculo;
+}());
+exports.vehiculo = vehiculo;

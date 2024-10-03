@@ -1,7 +1,7 @@
-import { Auto } from "../Ejercicio2/auto";
-import { Moto } from "../Ejercicio2/moto";
-import { Camion } from "../Ejercicio2/camion";
-import { RegistroAutomotor } from "../Ejercicio2/registro";
+import { Auto } from "../Ejercicio3/auto";
+import { Moto } from "../Ejercicio3/moto";
+import { Camion } from "../Ejercicio3/camion";
+import { RegistroAutomotor } from "../Ejercicio3/registro";
 
 function main() {
   const registro = new RegistroAutomotor("Seccional 1");
@@ -18,14 +18,14 @@ function main() {
 
 
 
-  //agrego otra moto
+  //agrego otra auto
   const nuevoaAuto = new Auto("XXY421", "Toyota", "hilux", 2022, 4);
   registro.agregarVehiculo("auto", nuevoaAuto);
 
   // Mostrar el registro 
   console.log("Registro automotor actualizado: ", registro);
 
-  // Modificar la cilindrada de una moto
+    // Modificar la cilindrada de una moto
    registro.modificarCilindradaMoto("ABC001", 800); // Cambiar cilindrada de la moto con dominio "ABC001"
   // Modificar la cantidad de puertas de un auto
   registro.modificarPuertasAuto("NEG321", 5); // Cambiar cantidad de puertas del auto con dominio "NEG321"

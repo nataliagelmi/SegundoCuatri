@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var auto_1 = require("../Ejercicio2/auto");
-var moto_1 = require("../Ejercicio2/moto");
-var camion_1 = require("../Ejercicio2/camion");
-var registro_1 = require("../Ejercicio2/registro");
+var auto_1 = require("../Ejercicio3/auto");
+var moto_1 = require("../Ejercicio3/moto");
+var camion_1 = require("../Ejercicio3/camion");
+var registro_1 = require("../Ejercicio3/registro");
 function main() {
     var registro = new registro_1.RegistroAutomotor("Seccional 1");
     // Crear vehículos
@@ -14,7 +14,7 @@ function main() {
     registro.agregarVehiculo('auto', auto1);
     registro.agregarVehiculo('moto', moto1);
     registro.agregarVehiculo('camion', camion1);
-    //agrego otra moto
+    //agrego otra auto
     var nuevoaAuto = new auto_1.Auto("XXY421", "Toyota", "hilux", 2022, 4);
     registro.agregarVehiculo("auto", nuevoaAuto);
     // Mostrar el registro 
