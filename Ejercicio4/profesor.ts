@@ -30,8 +30,8 @@ export class Profesor extends Staff {
         console.log(`${this.nombre} está dictando una clase de ${this.especialidad}`);
     }
 
-     // Implementación del método abstracto
-     obtenerIdentificador(): string {
+     // Implementación polimorfismo
+       obtenerIdentificador(): string {
         return `Legajo del Profesor: ${this.legajo}`;
     }
 }

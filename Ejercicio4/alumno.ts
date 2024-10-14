@@ -28,7 +28,7 @@ export class Alumno extends Staff {
     inscribirseDisciplina(): void {
         console.log(`${this.getNombre} se ha inscrito en una disciplina`);
    }
-    // Implementación del método polimorfismo
+    // "" método polimorfismo
     obtenerIdentificador(): string {
         return `Matricula del Alumno: ${this.matricula}`;
     }
