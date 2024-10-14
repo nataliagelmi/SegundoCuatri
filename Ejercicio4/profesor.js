@@ -20,9 +20,10 @@ var staff_1 = require("../Ejercicio4/staff"); // Asegúrate de que la ruta es co
 var Profesor = /** @class */ (function (_super) {
     __extends(Profesor, _super);
     // Constructor que crea las instancias
-    function Profesor(nombre, dni, especialidad) {
+    function Profesor(nombre, dni, especialidad, legajo) {
         var _this = _super.call(this, nombre, dni) || this; // Llama al constructor de la clase padre Staff
         _this.especialidad = especialidad;
+        _this.legajo = legajo;
         return _this;
     }
     // Getter
@@ -41,6 +42,10 @@ var Profesor = /** @class */ (function (_super) {
     // Método dictarClase
     Profesor.prototype.dictarClase = function () {
         console.log("".concat(this.nombre, " est\u00E1 dictando una clase de ").concat(this.especialidad));
+    };
+    // Implementación del método abstracto
+    Profesor.prototype.obtenerIdentificador = function () {
+        return "Legajo del Profesor: ".concat(this.legajo);
     };
     return Profesor;
 }(staff_1.Staff));

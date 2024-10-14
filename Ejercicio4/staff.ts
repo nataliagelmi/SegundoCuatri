@@ -1,4 +1,4 @@
-export class Staff {
+export abstract class Staff {
     protected nombre: string;
     protected dni: number;
 
@@ -33,4 +33,6 @@ export class Staff {
             console.error("DNI inválido. Debe ser un número de 8 dígitos.");
         }
     }
+  // Método abstracto que será implementado en las subclases
+     abstract obtenerIdentificador(): string; 
 }

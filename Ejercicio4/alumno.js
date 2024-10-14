@@ -20,9 +20,10 @@ var staff_1 = require("../Ejercicio4/staff");
 var Alumno = /** @class */ (function (_super) {
     __extends(Alumno, _super);
     //  me crea las instancias.
-    function Alumno(nombre, dni, nivel) {
+    function Alumno(nombre, dni, nivel, matricula) {
         var _this = _super.call(this, nombre, dni) || this;
         _this.nivel = nivel;
+        _this.matricula = matricula;
         return _this;
     }
     //getter
@@ -37,6 +38,10 @@ var Alumno = /** @class */ (function (_super) {
     };
     Alumno.prototype.inscribirseDisciplina = function () {
         console.log("".concat(this.getNombre, " se ha inscrito en una disciplina"));
+    };
+    // Implementación del método polimorfismo
+    Alumno.prototype.obtenerIdentificador = function () {
+        return "Matricula del Alumno: ".concat(this.matricula);
     };
     return Alumno;
 }(staff_1.Staff));
