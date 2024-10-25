@@ -1,7 +1,8 @@
 import { Mago } from "./mago";
 
 export class ArchiMago extends Mago {
-    super_poder: string;
+    protected super_poder: string;
+    private poder_magico_requerido=15;
 
     constructor(nombre: string, puntosDeVida: number, poder_magico: number, super_poder: string) {
         super(nombre, puntosDeVida, poder_magico);
@@ -18,7 +19,7 @@ export class ArchiMago extends Mago {
     }
    // este esta mejorado del heredado del mago.
     lanzarHechizo(): void {
-        if (this.poder_magico > 15) {
+        if (this.poder_magico > this.poder_magico_requerido) {
             console.log(`${this.nombre} lanza un hechizo mejorado.`);
             this.poder_magico -= 5; // es mas potente pero se debilita mas rapido
         } else {

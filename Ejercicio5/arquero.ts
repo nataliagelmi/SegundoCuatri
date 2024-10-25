@@ -1,7 +1,7 @@
 import { Personaje } from "./personaje";
 
 export class Arquero extends Personaje {
-    cant_flechas: number;
+    protected cant_flechas: number;
 
     constructor(nombre: string, puntosDeVida: number, cant_flechas: number) {
         super(nombre, puntosDeVida);

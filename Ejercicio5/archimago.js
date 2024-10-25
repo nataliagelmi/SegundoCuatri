@@ -21,6 +21,7 @@ var ArchiMago = /** @class */ (function (_super) {
     __extends(ArchiMago, _super);
     function ArchiMago(nombre, puntosDeVida, poder_magico, super_poder) {
         var _this = _super.call(this, nombre, puntosDeVida, poder_magico) || this;
+        _this.poder_magico_requerido = 15;
         _this.super_poder = super_poder;
         return _this;
     }
@@ -35,7 +36,7 @@ var ArchiMago = /** @class */ (function (_super) {
     };
     // este esta mejorado del heredado del mago.
     ArchiMago.prototype.lanzarHechizo = function () {
-        if (this.poder_magico > 15) {
+        if (this.poder_magico > this.poder_magico_requerido) {
             console.log("".concat(this.nombre, " lanza un hechizo mejorado."));
             this.poder_magico -= 5; // es mas potente pero se debilita mas rapido
         }

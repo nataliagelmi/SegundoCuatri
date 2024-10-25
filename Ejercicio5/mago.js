@@ -21,11 +21,12 @@ var Mago = /** @class */ (function (_super) {
     __extends(Mago, _super);
     function Mago(nombre, puntosDeVida, poder_magico) {
         var _this = _super.call(this, nombre, puntosDeVida) || this;
+        _this.poder_magico_minimo = 0;
         _this.poder_magico = poder_magico;
         return _this;
     }
     Mago.prototype.lanzarHechizo = function () {
-        if (this.poder_magico > 0) {
+        if (this.poder_magico > this.poder_magico_minimo) {
             console.log("".concat(this.nombre, " lanza un hechizo."));
             this.poder_magico--;
         }

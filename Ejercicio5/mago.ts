@@ -2,6 +2,7 @@ import { Personaje } from "./personaje";
 
 export class Mago extends Personaje {
     protected poder_magico: number;
+    private   poder_magico_minimo = 0; 
 
     constructor(nombre: string, puntosDeVida: number, poder_magico: number) {
         super(nombre, puntosDeVida);
@@ -9,7 +10,7 @@ export class Mago extends Personaje {
     }
 
     lanzarHechizo(): void {
-        if (this.poder_magico > 0) {
+        if (this.poder_magico > this.poder_magico_minimo) {
             console.log(`${this.nombre} lanza un hechizo.`);
             this.poder_magico--;
         } else {

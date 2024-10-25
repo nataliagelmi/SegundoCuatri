@@ -2,7 +2,7 @@
 import { Personaje } from "./personaje";
 
 export class Luchador extends Personaje {
-    golpes: number;
+   protected golpes: number;
 
     constructor(nombre: string, puntosDeVida: number, golpes: number) {
         super(nombre, puntosDeVida);
